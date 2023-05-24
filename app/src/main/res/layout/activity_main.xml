@@ -15,8 +15,8 @@
         android:text="7X2.1"
         android:textColor="@color/TEXT"
         android:textSize="32sp"
-        android:textAlignment="textEnd"
         android:gravity="bottom"
+        android:textAlignment="textEnd"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,11 +28,11 @@
     <TextView
         android:id="@+id/result"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:text="14.7"
+        android:layout_height="wrap_content"
+        android:text="0"
         android:textAlignment="textEnd"
         android:textColor="@color/white"
-        android:textSize="52sp"
+        android:textSize="42sp"
         app:layout_constraintBottom_toTopOf="@+id/layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +132,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/poppins_bold"
                     android:gravity="center"
-                    android:text="X"
+                    android:text="*"
                     android:textColor="@color/white"
                     android:textSize="28sp" />
 
