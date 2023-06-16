@@ -121,14 +121,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void operation(String no) {
         Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        vibe.vibrate(80);
+        vibe.vibrate(60);
         if (no.equals("AC")){
             input = "";
-        }else if (no.equals("<-")){
+        } else if (no.equals("<-")){
             if (!input.equals("")) {
                 Character last = input.charAt(input.length()-1);
                 if (last.equals(" ")) {
                     input = input.substring(0, input.length() - 2);
+                }else{
+                    input = input.substring(0, input.length()-1);
                 }
             }
         } else if (no.equals("result")) {
@@ -139,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (input.length()>1){
                 prev = input.substring(input.length() - 2, input.length()-1);
             }
-            if ((prev.equals("+") || prev.equals("X") || prev.equals("-") || prev.equals("%"))&& (no.equals(" + ") || no.equals(" - ") || no.equals(" X ") || no.equals(" % ")) ) {
+            if ((prev.equals("+") || prev.equals("X") || prev.equals("-") || prev.equals("%") || prev.equals("."))&& (no.equals(" + ") || no.equals(" - ") || no.equals(" X ") || no.equals(" % ") || no.equals(" . ")) ) {
                 istwiceoperator = true;
             }
             if (input.equals("") && (no.equals(" + ") || no.equals(" - ") || no.equals(" X ") || no.equals(" % ") || no.equals(".")) ){
